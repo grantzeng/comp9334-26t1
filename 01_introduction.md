@@ -51,6 +51,7 @@ $$
 R = W + S
 $$ 
 where $W$ is waiting time (in some queue) and $S$ is processing/service time (how long it takes for request to be processed by a server)
+> So to analyse this probabilistically we need to know something about the arrival rate and interarrival probabiltity distribution, and the service time distribution. 
 
 
 ### Throughput 
@@ -71,6 +72,7 @@ _Note_: Some systems experience **thrashing** where when a system is overloaded,
 ### Scalability 
 (Not covered in course)
 
+# (Single server FIFO queues)
 
 # Tools/techniques, example problems
 `TODO`

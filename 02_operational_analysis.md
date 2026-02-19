@@ -6,6 +6,11 @@
 
 `TODO: How does the fact a system is closed or open affect how we analyse it?`
 
+
+# Closed/open networks 
+
+
+
 # Operational laws 
 > For the purposes of the discussion imagine a FIFO queue to simply things. Other than Little's law, these are fairly easy to derive. Little's law is more fundamental so we separate that out. 
 
