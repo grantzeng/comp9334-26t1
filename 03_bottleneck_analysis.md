@@ -44,7 +44,7 @@ $$
 $$
 and we have a better bound on $X_0$ as
 $$
-    \boxed{X_0 \leq \min \left\{ \frac{1}{\max\limits_{j}D_j}, \frac{N}{\sum\limits_{j} D_j} \right\}}
+    \boxed{X_0 \leq \min \left \{ \frac{1}{\max\limits_{j}D_j}, \frac{N}{\sum\limits_{j} D_j} \right\}}
 $$
 
 ### (Interactive systems: need to use interactive response time law and not just plain Little's law)
@@ -66,7 +66,9 @@ $$
 
 
 
-# Modification analysis
+## Example: modification analysis 
+
+`TODO: Do we get the new system? It depends on M`
 
 
 
