@@ -1,9 +1,7 @@
 # Operationl analysis 
 Computer systems are modelled as a directed graph of queues, called a _queueing network_. 
 
-
-> We start in a non-probabilisitic setting of a queuing network on some interval $[0, T]$, and basically want to look at "average case" behaviour.  Stochastic processes for later. 
-
+> We start in a non-probabilisitic setting of a queuing network on some interval $[0, T]$, and we want to look at "average" behaviour.  Stochastic processes/extreme behaviour for later.
 
 ### Open versus closed queuing networks
 
@@ -55,7 +53,7 @@ Jobs might take multiple visits to device $j$ to complete through the whole syst
 $$
 V_j := \frac{C_j}{C_0}
 $$
-> _Intuition for why it's defined like this_: if a job needs a subsystem 3x times more, then there should be three times the completions at $j$ compared to the whole system
+> _Intuition for the definition_: if a job needs a subsystem "3x times more", then there should be three times the completions at $j$ compared to the whole system
 
 Since throughputs at $j$ and the whole system are defined as $X_j := C_j/T$ and $X_0 := C_j/T$, we have: 
 $$
@@ -93,20 +91,26 @@ $$
 > This law is very important for determining where (on average) system bottleneck happens!
 
 ## Little's law 
-Little's law is basically an accounting identity relating how many jobs are in a system to arrival rate and how long it takes for the job to complete. 
+`TODO: Change this to the lecture notation`
+
+Little's law is basically an accounting identity relating how many jobs are in a system to the rate jobs arrive and how long it takes for a job to complete. 
 
 $$
-\boxed{\bar{N}_j = X_j \bar{R_j}}
+\boxed{N_{avg} = X R_{avg}}
 $$
 where: 
-- $\bar{N_j}$ is the average number of jobs in the device $j$
-- $\bar{R_j}$ is the average response time of requests (note that this isn't _just_ service demand/time, this _includes_ waiting time)
+- $N_{avg,j}$ is the average number of jobs in the device $j$
+- $R_{avg, j}$ is the average response time of requests in device $j$ (note that this isn't _just_ service demand/time, this _includes_ waiting time if there is any)
 
 
-> The significance of Little's law is that it applies at _every_ level of a queueing network (check if your sums balance!)
+The significance of Little's law is that is a invariant at _every_ level of a queueing network.
+
+> E.g. in a system with one queue and one server, $N_{avg} = N_{avg, queue} + N_{avg, server}$ and $R_{avg} = R_{avg, queue} + R_{avg, server} = W + S$ where $W$ is mean wait time and $S$ is mean service time for the whole system, and Little's law holds whether you look at device $0$, just the queue or just the server.  
+
+> Use it to sanity check your sums!
+
 
 (Proof is complicated, so omitted here.)
-
 
 > Typically in a probabilistic setting you'll more often see it written as $L = \lambda W$ where $L$ is for "load", $\lambda$ arrival rate, and $W$ cycle/lead time (how much time a job spends in the system)
 
@@ -114,8 +118,11 @@ where:
 
 
 # (Worked examples)
-`TODO`
+`TODO: Calculations using operational laws + calculations from definition`
 
+`TODO: Using Little's law as an accounting identity at different levels of the system`
+
+> https://en.wikipedia.org/wiki/Dimensional_analysis (sanity check your sums)
 
 # Proof of Little's law
 
